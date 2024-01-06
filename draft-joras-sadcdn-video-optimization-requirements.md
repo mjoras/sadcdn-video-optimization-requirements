@@ -41,7 +41,6 @@ informative:
 
 These are the requirements for the "Video Optimization" use-case for the SADCDN topic, which broadly speaking seeks to optimize video playback experience in mobile networks by cooperative communication between video content providers and the providers of network services to end users.
 
-
 --- middle
 
 # Introduction
