@@ -10,7 +10,7 @@
 <meta content="Abhishek Tiwari" name="author">
 <meta content="Alan Frindell" name="author">
 <meta content='
-       These are the requirements for the "Video Optimization" use-case for the SADCDN topic, which broadly speaking seeks to optimize video playback experience in mobile networks by cooperate communication between video content providers and the providers of network services to end users. 
+       These are the requirements for the "Video Optimization" use-case for the SADCDN topic, which broadly speaking seeks to optimize video playback experience in mobile networks by cooperative communication between video content providers and the providers of network services to end users. 
     ' name="description">
 <meta content="xml2rfc 3.19.0" name="generator">
 <meta content="next generation" name="keyword">
@@ -1077,7 +1077,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">SADCDN Video Optimization Requirements</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">These are the requirements for the "Video Optimization" use-case for the SADCDN topic, which broadly speaking seeks to optimize video playback experience in mobile networks by cooperate communication between video content providers and the providers of network services to end users.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">These are the requirements for the "Video Optimization" use-case for the SADCDN topic, which broadly speaking seeks to optimize video playback experience in mobile networks by cooperative communication between video content providers and the providers of network services to end users.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-discussion-venues">
@@ -1200,25 +1200,25 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">Video traffic is already 70% of all traffic on the Internet  and is expected to grow to 80% by 2028. Upcoming formats like short form videos have seen tremendous growth in recent years. Both in developed and emerging markets video traffic forms 50-80% of traffic on mobile networks. These growth trends are likely to increase with new populations coming online on mobile-first markets and the observation that unlike text content, video content consumption is not being limited by literacy barriers. On the other hand, the electromagnetic spectrum is a limited resource. In order to ensure that mobile networks continue functioning in a healthy state despite this incredible growth, communication service providers (CSPs) will be required to make infrastructure investments such as more licensed spectrum, cell densification, massive MIMO etc. In order to flatten the rate of growth, CSPs in several markets attempt to identify and shape video traffic based on user data plans. There are several problems with this kind of shaping:<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">Video traffic is already 70% of all traffic on the Internet  and is expected to grow to 80% by 2028. New formats like short form videos have seen tremendous growth in recent years. Both in developed and emerging markets video traffic forms 50-80% of traffic on mobile networks. These growth trends are likely to increase with new populations coming online on mobile-first markets and the observation that unlike text content, video content consumption is not being limited by literacy barriers. On the other hand, the electromagnetic spectrum is a limited resource. In order to ensure that mobile networks continue functioning in a healthy state despite this incredible growth, communication service providers (CSPs) will be required to make infrastructure investments such as more licensed spectrum, cell densification, massive MIMO etc. In order to flatten the rate of growth, CSPs in several markets attempt to identify and shape video traffic based on user data plans. There are several problems with this kind of shaping:<a href="#section-1-1" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-1-2">
 <li id="section-1-2.1">
-          <p id="section-1-2.1.1">Traffic detection and throttling for every flow is compute intensive for CSPs. With distributed UPF (user plane function) in 5G mobile networks more nodes in CSP network may need to support traffic detection and throttling.<a href="#section-1-2.1.1" class="pilcrow">¶</a></p>
+          <p id="section-1-2.1.1">Traffic detection and shaping for every flow is compute intensive for CSPs. With distributed UPF (user plane function) in 5G mobile networks more nodes in CSP network may need to support traffic detection and shaping.<a href="#section-1-2.1.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-1-2.2">
-          <p id="section-1-2.2.1">User mobility during the ongoing session, mainly with distributed UPF (user plane function) in 5G mobile networks may result in throttling inaccuracies.<a href="#section-1-2.2.1" class="pilcrow">¶</a></p>
+          <p id="section-1-2.2.1">User mobility during the ongoing session, mainly with distributed UPF (user plane function) in 5G mobile networks may result in shpaing inaccuracies.<a href="#section-1-2.2.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-1-2.3">
           <p id="section-1-2.3.1">Traffic detection can have inaccuracies and these inaccuracies are expected to increase as the content delivery industry moves towards end-2-end encryption like TLS 1.3 and encrypted client hello (ECH).<a href="#section-1-2.3.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-1-2.4">
-          <p id="section-1-2.4.1">The unpredictable behavior of traffic throttlers used by CSPs confuse the bandwidth estimation and congestion control protocols being used within end-2-end video delivery sessions between content server and client. This results in poor quality of experience (QoE) for the end user.<a href="#section-1-2.4.1" class="pilcrow">¶</a></p>
+          <p id="section-1-2.4.1">The unpredictable behavior of traffic shapers used by CSPs confuse the bandwidth estimation and congestion control protocols being used within end-2-end video delivery sessions between content server and client. This results in poor quality of experience (QoE) for the end user.<a href="#section-1-2.4.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-1-2.5">
-          <p id="section-1-2.5.1">Content and Application Providers (CAPs) are designing algorithms to detect the presence of such traffic throttlers to counter their detrimental effects. These algorithms have their own inaccuracies in detection and add compute resources on the CAP side.<a href="#section-1-2.5.1" class="pilcrow">¶</a></p>
+          <p id="section-1-2.5.1">Content and Application Providers (CAPs) are designing algorithms to detect the presence of such traffic shapers to counter their detrimental effects. These algorithms have their own inaccuracies in detection and add compute resources on the CAP side.<a href="#section-1-2.5.1" class="pilcrow">¶</a></p>
 </li>
       </ol>
-<p id="section-1-3">A secure in-band data sharing interface between CSPs and CAPs can enable the CSPs to specify video traffic characteristics (that are suited to their radio access networks) to the CAPs. CAPs can use this information to self-adapt their video traffic to conform to the specified characteristics. Self Adaptation and Self limitation is a better alternative because CAPs have full context and ability to measure user QoE, which CSPs do not. This approach has the potential to help CSPs manage the traffic on their cellular networks without incurring the cost and compute associated traffic detection and traffic throttling while making sure that end user QoE is not compromised which is win-win for both CSPs and CAPs.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-3">A secure in-band data sharing interface between CSPs and CAPs can enable the CSPs to specify video traffic characteristics (that are suited to their radio access networks) to the CAPs. CAPs can use this information to self-adapt their video traffic to conform to the specified characteristics. Self Adaptation and Self limitation is a better alternative because CAPs have full context and ability to measure user QoE, which CSPs do not. This approach has the potential to help CSPs manage the traffic on their cellular networks without incurring the cost and compute associated traffic detection and traffic shaping while making sure that end user QoE is not compromised which is win-win for both CSPs and CAPs.<a href="#section-1-3" class="pilcrow">¶</a></p>
 <p id="section-1-4">What follows are the primary, secondary, and non-requirements of a technical solution to this problem on the modern Internet.<a href="#section-1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1314,7 +1314,7 @@ Both the options have pros and cons. We are proposing option # i due to followin
         </h3>
 <p id="section-2.10-1">To support video optimization use-case at scale, significant additional compute in the packet core should not be required. This requirement has some dependency on following aforementioned requirements:
 1. As specified earlier in the document, due to low frequency information exchange requirement, there may not be a need for significant additional compute in the packet core to support this video optimization use-case’s requirements at scale.
-2. No need to support traffic throttling in the packet core. This would also free up computational resources.<a href="#section-2.10-1" class="pilcrow">¶</a></p>
+2. No need to support traffic shaping in the packet core. This would also free up computational resources.<a href="#section-2.10-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1344,7 +1344,7 @@ Both the options have pros and cons. We are proposing option # i due to followin
           <p id="section-4-1.2.1">Data flows from CSP mobile network device to CAP server<a href="#section-4-1.2.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-4-1.3">
-          <p id="section-4-1.3.1">Fixed networks -  Fixed network is out of scope at present, since most of the CSPs don’t do video flow throttling for fixed networks. If and when we include fixed networks in the scope, CSP network devices can be CMTS for Cable modem network or BNG for Fiber/DSL network.<a href="#section-4-1.3.1" class="pilcrow">¶</a></p>
+          <p id="section-4-1.3.1">Fixed networks -  Fixed network is out of scope at present, since most of the CSPs don’t do video flow shaping for fixed networks. If and when we include fixed networks in the scope, CSP network devices can be CMTS for Cable modem network or BNG for Fiber/DSL network.<a href="#section-4-1.3.1" class="pilcrow">¶</a></p>
 </li>
       </ol>
 </section>
