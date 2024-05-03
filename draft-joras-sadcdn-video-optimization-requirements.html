@@ -12,26 +12,26 @@
 <meta content='
        These are the requirements for the "Video Optimization" use-case for the SADCDN topic, which broadly speaking seeks to optimize video playback experience in mobile networks by cooperative communication between video content providers and the providers of network services to end users. 
     ' name="description">
-<meta content="xml2rfc 3.19.0" name="generator">
+<meta content="xml2rfc 3.21.0" name="generator">
 <meta content="next generation" name="keyword">
 <meta content="unicorn" name="keyword">
 <meta content="sparkling distributed ledger" name="keyword">
 <meta content="draft-joras-sadcdn-video-optimization-requirements-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.19.0
-    Python 3.11.6
+  xml2rfc 3.21.0
+    Python 3.11.9
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
     intervaltree 3.1.0
     Jinja2 3.1.2
     lxml 4.9.3
-    platformdirs 4.1.0
+    platformdirs 4.2.1
     pycountry 22.3.5
     PyYAML 6.0.1
     requests 2.31.0
     setuptools 68.2.2
     six 1.16.0
-    wcwidth 0.2.12
+    wcwidth 0.2.13
 -->
 <link href="draft-joras-sadcdn-video-optimization-requirements.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1286,6 +1286,7 @@ Both the options have pros and cons. We are proposing option # i due to followin
 <a href="#section-2.7" class="section-number selfRef">2.7. </a><a href="#name-scalable-for-potentially-ev" class="section-name selfRef">Scalable for potentially every video flow in a mobile network</a>
         </h3>
 <p id="section-2.7-1">This use case requires that potentially every video flow in a mobile network be able to utilize this feature. Thus, it must be performant both for the network device and the mobile device utilizing it.<a href="#section-2.7-1" class="pilcrow">¶</a></p>
+<p id="section-2.7-2">There are cases that must be supported where the mobile network User Equipment (UE) device does not run the client application endpoint for the video flow.  Examples include modes where the UE is supporting Fixed Wireless Access (FWA) services, or where the UE operates as a hotspot providing access for other devices.<a href="#section-2.7-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="works-with-quic-and-http3">
