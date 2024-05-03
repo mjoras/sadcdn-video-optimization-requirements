@@ -89,6 +89,8 @@ Both the options have pros and cons. We are proposing option # i due to followin
 ## Scalable for potentially every video flow in a mobile network
 This use case requires that potentially every video flow in a mobile network be able to utilize this feature. Thus, it must be performant both for the network device and the mobile device utilizing it.
 
+There are cases that must be supported where the mobile network User Equipment (UE) device does not run the client application endpoint for the video flow.  Examples include modes where the UE is supporting Fixed Wireless Access (FWA) services, or where the UE operates as a hotspot providing access for other devices.
+
 ## Works with QUIC and HTTP/3
 HTTP/3 is being used widely as a delivery mechanism for video content by video content providers, and is a critical requirement to support. HTTP/3’s use of QUIC has convenient properties (notably in its use of UDP) that makes solutions in this space more convenient.
 
