@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-05-02T00:58:35.516292+00:00",
+  "timestamp": "2024-05-05T01:03:15.953424+00:00",
   "repo": "mjoras/sadcdn-video-optimization-requirements",
   "labels": [
     {
@@ -50,5 +50,34 @@
     }
   ],
   "issues": [],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOLBVe_85uedR5",
+      "title": "mention hotspot and FWA aspects",
+      "url": "https://github.com/mjoras/sadcdn-video-optimization-requirements/pull/1",
+      "state": "MERGED",
+      "author": "wesley-eddy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Intended to resolve: https://github.com/mjoras/SCONE-PROTOCL/issues/32",
+      "createdAt": "2024-05-03T13:46:54Z",
+      "updatedAt": "2024-05-03T16:32:50Z",
+      "baseRepository": "mjoras/sadcdn-video-optimization-requirements",
+      "baseRefName": "main",
+      "baseRefOid": "e4fd181acff90faad1c467816fce22aca34fc459",
+      "headRepository": "wesley-eddy/sadcdn-video-optimization-requirements",
+      "headRefName": "patch-1",
+      "headRefOid": "5d6689e72ce4a82fdef7af7373cb7506f44bff24",
+      "closedAt": "2024-05-03T16:32:50Z",
+      "mergedAt": "2024-05-03T16:32:50Z",
+      "mergedBy": "mjoras",
+      "mergeCommit": {
+        "oid": "1403a8d999fc6d111adb8d311a63f11ba8704cf0"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
