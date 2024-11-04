@@ -1,12 +1,12 @@
 ---
-title: "SADCDN Video Optimization Requirements"
-abbrev: "SADCDN Video Optimization Requirements"
+title: "SCONE Video Optimization Requirements"
+abbrev: "SCONE Video Optimization Requirements"
 category: info
 
-docname: draft-joras-sadcdn-video-optimization-requirements-latest
+docname: draft-joras-scone-video-optimization-requirements-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
-date: 2024-01-05
+date: 2024-04-11
 consensus: true
 v: 3
 keyword:
@@ -39,7 +39,7 @@ informative:
 
 --- abstract
 
-These are the requirements for the "Video Optimization" use-case for the SADCDN topic, which broadly speaking seeks to optimize video playback experience in mobile networks by cooperative communication between video content providers and the providers of network services to end users.
+These are the requirements for the "Video Optimization" use-case for SCONE, which broadly speaking seeks to optimize video playback experience in mobile networks by cooperative communication between video content providers and the providers of network services to end users.
 
 --- middle
 
